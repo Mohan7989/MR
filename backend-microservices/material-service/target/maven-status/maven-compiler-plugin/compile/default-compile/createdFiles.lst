@@ -1,0 +1,9 @@
+com\mrca\material\model\Material.class
+com\mrca\material\MaterialServiceApplication.class
+com\mrca\material\model\Material$Semester.class
+com\mrca\material\model\Material$MaterialType.class
+com\mrca\material\model\Material$Group.class
+com\mrca\material\service\MaterialService.class
+com\mrca\material\model\Material$Status.class
+com\mrca\material\controller\MaterialController.class
+com\mrca\material\repository\MaterialRepository.class

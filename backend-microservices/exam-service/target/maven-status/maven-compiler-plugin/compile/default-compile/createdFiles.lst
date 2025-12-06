@@ -1,0 +1,9 @@
+com\mrca\exam\repository\ExamTimetableRepository.class
+com\mrca\exam\model\ExamTimetable.class
+com\mrca\exam\ExamServiceApplication.class
+com\mrca\exam\service\ExamService.class
+com\mrca\exam\controller\ExamController.class
+com\mrca\exam\repository\SliderImageRepository.class
+com\mrca\exam\model\SliderImage.class
+com\mrca\exam\model\ExamTimetable$1.class
+com\mrca\exam\model\ExamTimetable$ScheduleEntry.class

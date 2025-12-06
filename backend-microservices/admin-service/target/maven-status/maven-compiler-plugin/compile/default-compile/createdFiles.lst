@@ -1,0 +1,5 @@
+com\mrca\admin\AdminServiceApplication.class
+com\mrca\admin\feign\NoticeServiceClient.class
+com\mrca\admin\controller\AdminController.class
+com\mrca\admin\feign\ExamServiceClient.class
+com\mrca\admin\feign\MaterialServiceClient.class

@@ -1,0 +1,7 @@
+com\mrca\notice\model\Notice.class
+com\mrca\notice\repository\UpdateRepository.class
+com\mrca\notice\service\NoticeService.class
+com\mrca\notice\model\Update.class
+com\mrca\notice\NoticeServiceApplication.class
+com\mrca\notice\controller\NoticeController.class
+com\mrca\notice\repository\NoticeRepository.class

@@ -1,0 +1,3 @@
+com\mrca\file\controller\FileController.class
+com\mrca\file\FileServiceApplication.class
+com\mrca\file\service\FileStorageService.class
