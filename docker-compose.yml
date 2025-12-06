@@ -1,0 +1,207 @@
+version: '3.8'
+
+services:
+  # Database
+  mysql:
+    image: mysql:8.0
+    container_name: mrca-mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-root}
+      MYSQL_DATABASE: ${MYSQL_DATABASE:-mrca_students_hub}
+      MYSQL_USER: ${MYSQL_USER:-root}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD:-root}
+    ports:
+      - "${MYSQL_PORT:-3306}:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./database/mysql-scripts:/docker-entrypoint-initdb.d
+    networks:
+      - mrca-network
+    healthcheck:
+      test: [ "CMD", "mysqladmin", "ping", "-h", "localhost" ]
+      timeout: 20s
+      retries: 10
+
+  # Service Registry
+  eureka-server:
+    build:
+      context: ./backend-microservices/eureka-server
+      dockerfile: Dockerfile
+    container_name: mrca-eureka-server
+    ports:
+      - "8761:8761"
+    networks:
+      - mrca-network
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:8761/actuator/health" ]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+  # API Gateway
+  api-gateway:
+    build:
+      context: ./backend-microservices/api-gateway
+      dockerfile: Dockerfile
+    container_name: mrca-api-gateway
+    ports:
+      - "8080:8080"
+    environment:
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eureka-server:8761/eureka/
+    networks:
+      - mrca-network
+    depends_on:
+      eureka-server:
+        condition: service_healthy
+
+  # Business Services
+  auth-service:
+    build:
+      context: ./backend-microservices/auth-service
+      dockerfile: Dockerfile
+    container_name: mrca-auth-service
+    ports:
+      - "8081:8081"
+    environment:
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eureka-server:8761/eureka/
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/mrca_students_hub?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+      SPRING_DATASOURCE_USERNAME: ${MYSQL_USER:-root}
+      SPRING_DATASOURCE_PASSWORD: ${MYSQL_PASSWORD:-root}
+    networks:
+      - mrca-network
+    depends_on:
+      eureka-server:
+        condition: service_healthy
+      mysql:
+        condition: service_healthy
+
+  admin-service:
+    build:
+      context: ./backend-microservices/admin-service
+      dockerfile: Dockerfile
+    container_name: mrca-admin-service
+    ports:
+      - "8085:8085"
+    environment:
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eureka-server:8761/eureka/
+    networks:
+      - mrca-network
+    depends_on:
+      eureka-server:
+        condition: service_healthy
+
+  exam-service:
+    build:
+      context: ./backend-microservices/exam-service
+      dockerfile: Dockerfile
+    container_name: mrca-exam-service
+    ports:
+      - "8083:8083"
+    environment:
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eureka-server:8761/eureka/
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/mrca_students_hub?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+      SPRING_DATASOURCE_USERNAME: ${MYSQL_USER:-root}
+      SPRING_DATASOURCE_PASSWORD: ${MYSQL_PASSWORD:-root}
+    networks:
+      - mrca-network
+    depends_on:
+      eureka-server:
+        condition: service_healthy
+      mysql:
+        condition: service_healthy
+
+  file-service:
+    build:
+      context: ./backend-microservices/file-service
+      dockerfile: Dockerfile
+    container_name: mrca-file-service
+    ports:
+      - "8088:8088"
+    environment:
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eureka-server:8761/eureka/
+    networks:
+      - mrca-network
+    depends_on:
+      eureka-server:
+        condition: service_healthy
+
+  material-service:
+    build:
+      context: ./backend-microservices/material-service
+      dockerfile: Dockerfile
+    container_name: mrca-material-service
+    ports:
+      - "8082:8082"
+    environment:
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eureka-server:8761/eureka/
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/mrca_students_hub?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+      SPRING_DATASOURCE_USERNAME: ${MYSQL_USER:-root}
+      SPRING_DATASOURCE_PASSWORD: ${MYSQL_PASSWORD:-root}
+    networks:
+      - mrca-network
+    depends_on:
+      eureka-server:
+        condition: service_healthy
+      mysql:
+        condition: service_healthy
+
+  notice-service:
+    build:
+      context: ./backend-microservices/notice-service
+      dockerfile: Dockerfile
+    container_name: mrca-notice-service
+    ports:
+      - "8084:8084"
+    environment:
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eureka-server:8761/eureka/
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/mrca_students_hub?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+      SPRING_DATASOURCE_USERNAME: ${MYSQL_USER:-root}
+      SPRING_DATASOURCE_PASSWORD: ${MYSQL_PASSWORD:-root}
+    networks:
+      - mrca-network
+    depends_on:
+      eureka-server:
+        condition: service_healthy
+      mysql:
+        condition: service_healthy
+
+  # LLM Service (Optional/Disabled in pom but defined here)
+  llm-service:
+    build:
+      context: ./backend-microservices/llm-service
+      dockerfile: Dockerfile
+    container_name: mrca-llm-service
+    ports:
+      - "8086:8086"
+    environment:
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eureka-server:8761/eureka/
+    networks:
+      - mrca-network
+    depends_on:
+      eureka-server:
+        condition: service_healthy
+    profiles:
+      - all # Only start if explicitly requested or default profile includes it
+
+  # Frontend
+  frontend-react:
+    build:
+      context: ./frontend-react
+      dockerfile: Dockerfile
+    container_name: mrca-frontend
+    ports:
+      - "5173:80"
+    networks:
+      - mrca-network
+    depends_on:
+      api-gateway:
+        condition: service_started
+
+volumes:
+  mysql_data:
+
+
+networks:
+  mrca-network:
+    driver: bridge
