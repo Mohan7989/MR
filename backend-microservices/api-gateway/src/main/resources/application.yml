@@ -1,0 +1,84 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      routes:
+        # Public routes (no auth required)
+        - id: auth-service
+          uri: lb://AUTH-SERVICE
+          predicates:
+            - Path=/api/auth/**
+          
+        - id: material-service-public
+          uri: lb://MATERIAL-SERVICE
+          predicates:
+            - Path=/api/materials/public/**, /api/materials/upload
+          
+        - id: notice-service-public
+          uri: lb://NOTICE-SERVICE
+          predicates:
+            - Path=/api/notices/public/**
+          
+        - id: update-service-public
+          uri: lb://NOTICE-SERVICE
+          predicates:
+            - Path=/api/updates/public/**
+          
+        - id: exam-service-public
+          uri: lb://EXAM-SERVICE
+          predicates:
+            - Path=/api/exams/public/**
+          
+        - id: slider-service-public
+          uri: lb://EXAM-SERVICE
+          predicates:
+            - Path=/api/sliders/public/**
+          
+        - id: llm-service-public
+          uri: lb://LLM-SERVICE
+          predicates:
+            - Path=/api/llm/check-result
+        
+        # Admin routes (require JWT)
+        - id: admin-service
+          uri: lb://ADMIN-SERVICE
+          predicates:
+            - Path=/api/admin/**
+          filters:
+            - name: JwtAuthenticationFilter
+        
+        - id: material-service-admin
+          uri: lb://MATERIAL-SERVICE
+          predicates:
+            - Path=/api/materials/admin/**
+          filters:
+            - name: JwtAuthenticationFilter
+        
+        - id: file-service-admin
+          uri: lb://FILE-SERVICE
+          predicates:
+            - Path=/api/files/admin/**
+          filters:
+            - name: JwtAuthenticationFilter
+
+      default-filters:
+        - DedupeResponseHeader=Access-Control-Allow-Origin Access-Control-Allow-Credentials
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    hostname: localhost
+
+logging:
+  level:
+    org.springframework.cloud.gateway: DEBUG
+    reactor.netty.http.client: DEBUG
+
+jwt:
+  secret: your-jwt-secret-key-change-in-production-1234567890

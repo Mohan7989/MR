@@ -1,0 +1,200 @@
+src/api/queryClient.ts(7,7): error TS2353: Object literal may only specify known properties, and 'cacheTime' does not exist in type 'OmitKeyof<QueryObserverOptions<unknown, Error, unknown, unknown, readonly unknown[], never>, "suspense" | "queryKey", "strictly">'.
+src/App.tsx(1,1): error TS6133: 'React' is declared but its value is never read.
+src/components/admin/ManageNotices.tsx(1,8): error TS6133: 'React' is declared but its value is never read.
+src/components/admin/ManageNotices.tsx(7,26): error TS2307: Cannot find module '@/components/ui/textarea' or its corresponding type declarations.
+src/components/admin/ManageNotices.tsx(176,28): error TS7006: Parameter 'e' implicitly has an 'any' type.
+src/components/admin/ManageNotices.tsx(184,35): error TS7006: Parameter 'checked' implicitly has an 'any' type.
+src/components/admin/ManageNotices.tsx(191,35): error TS7006: Parameter 'checked' implicitly has an 'any' type.
+src/components/admin/ManageResultSettings.tsx(1,8): error TS6133: 'React' is declared but its value is never read.
+src/components/admin/ManageSliders.tsx(214,35): error TS7006: Parameter 'checked' implicitly has an 'any' type.
+src/components/admin/ManageTimetables.tsx(1,8): error TS6133: 'React' is declared but its value is never read.
+src/components/admin/ManageTimetables.tsx(96,18): error TS2322: Type '{ date: string; day: string; ba_subject: string; bsc_subject: string; bcom_subject: string; bba_subject: string; }' is not assignable to type 'never'.
+src/components/admin/ManageTimetables.tsx(96,40): error TS2322: Type '{ date: string; day: string; ba_subject: string; bsc_subject: string; bcom_subject: string; bba_subject: string; }' is not assignable to type 'never'.
+src/components/admin/ManageTimetables.tsx(109,5): error TS2322: Type 'any' is not assignable to type 'never'.
+src/components/admin/ManageTimetables.tsx(109,28): error TS2698: Spread types may only be created from object types.
+src/components/admin/ManageTimetables.tsx(220,37): error TS7006: Parameter 'checked' implicitly has an 'any' type.
+src/components/admin/ManageUpdates.tsx(1,8): error TS6133: 'React' is declared but its value is never read.
+src/components/admin/ManageUpdates.tsx(154,35): error TS7006: Parameter 'checked' implicitly has an 'any' type.
+src/components/home/ExamTimetable.tsx(1,8): error TS6133: 'React' is declared but its value is never read.
+src/components/home/Footer.tsx(1,1): error TS6133: 'React' is declared but its value is never read.
+src/components/home/Footer.tsx(6,42): error TS6133: 'Calendar' is declared but its value is never read.
+src/components/home/Footer.tsx(6,52): error TS6133: 'Bell' is declared but its value is never read.
+src/components/home/Footer.tsx(8,10): error TS6133: 'ExternalLink' is declared but its value is never read.
+src/components/home/Header.tsx(1,8): error TS6133: 'React' is declared but its value is never read.
+src/components/home/Header.tsx(4,16): error TS6133: 'X' is declared but its value is never read.
+src/components/home/Header.tsx(7,51): error TS2307: Cannot find module '@/components/ui/sheet' or its corresponding type declarations.
+src/components/home/HeroSlider.tsx(1,8): error TS6133: 'React' is declared but its value is never read.
+src/components/home/HeroSlider.tsx(78,22): error TS7006: Parameter '_' implicitly has an 'any' type.
+src/components/home/HeroSlider.tsx(78,25): error TS7006: Parameter 'index' implicitly has an 'any' type.
+src/components/home/MaterialCard.tsx(1,1): error TS6133: 'React' is declared but its value is never read.
+src/components/home/MaterialCard.tsx(3,10): error TS6133: 'FileText' is declared but its value is never read.
+src/components/home/MaterialCard.tsx(7,22): error TS6133: 'isImageFile' is declared but its value is never read.
+src/components/home/MaterialCard.tsx(7,35): error TS6133: 'isPdfFile' is declared but its value is never read.
+src/components/home/MaterialsFilter.tsx(1,1): error TS6133: 'React' is declared but its value is never read.
+src/components/home/MaterialsFilter.tsx(37,60): error TS7006: Parameter 'val' implicitly has an 'any' type.
+src/components/home/MaterialsFilter.tsx(50,57): error TS7006: Parameter 'val' implicitly has an 'any' type.
+src/components/home/MaterialsFilter.tsx(61,65): error TS7006: Parameter 'val' implicitly has an 'any' type.
+src/components/home/MaterialsFilter.tsx(72,56): error TS7006: Parameter 'val' implicitly has an 'any' type.
+src/components/home/MaterialsList.tsx(1,8): error TS6133: 'React' is declared but its value is never read.
+src/components/home/NoticesSection.tsx(1,1): error TS6133: 'React' is declared but its value is never read.
+src/components/home/NoticesSection.tsx(3,37): error TS6133: 'ExternalLink' is declared but its value is never read.
+src/components/home/PreviewModal.tsx(1,1): error TS6133: 'React' is declared but its value is never read.
+src/components/home/PreviewModal.tsx(5,34): error TS6133: 'X' is declared but its value is never read.
+src/components/home/ResultSection.tsx(1,8): error TS6133: 'React' is declared but its value is never read.
+src/components/home/UpdatesTicker.tsx(1,1): error TS6133: 'React' is declared but its value is never read.
+src/components/home/UploadCTA.tsx(1,1): error TS6133: 'React' is declared but its value is never read.
+src/components/Layout.tsx(1,1): error TS6133: 'React' is declared but its value is never read.
+src/components/Layout.tsx(3,34): error TS7031: Binding element 'children' implicitly has an 'any' type.
+src/components/Layout.tsx(3,44): error TS7031: Binding element 'currentPageName' implicitly has an 'any' type.
+src/components/ui/dialog.tsx(2,34): error TS2307: Cannot find module '@radix-ui/react-dialog' or its corresponding type declarations.
+src/components/ui/index.ts(2,10): error TS2305: Module '"./Button"' has no exported member 'default'.
+src/components/ui/index.ts(2,35): error TS1149: File name 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/components/ui/Button.tsx' differs from already included file name 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/components/ui/button.tsx' only in casing.
+  The file is in the program because:
+    Imported via "@/components/ui/button" from file 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/components/home/Header.tsx'
+    Imported via "@/components/ui/button" from file 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/components/home/ResultSection.tsx'
+    Imported via "@/components/ui/button" from file 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/components/home/ExamTimetable.tsx'
+    Imported via "@/components/ui/button" from file 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/components/home/MaterialsFilter.tsx'
+    Imported via "@/components/ui/button" from file 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/components/home/MaterialCard.tsx'
+    Imported via "@/components/ui/button" from file 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/components/home/PreviewModal.tsx'
+    Imported via "@/components/ui/button" from file 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/components/home/UploadCTA.tsx'
+    Imported via "@/components/ui/button" from file 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/pages/Upload.tsx'
+    Imported via "@/components/ui/button" from file 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/pages/Materials.tsx'
+    Imported via '../components/ui/button' from file 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/pages/Admin.tsx'
+    Imported via "@/components/ui/button" from file 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/components/admin/ManageUpdates.tsx'
+    Imported via "@/components/ui/button" from file 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/components/admin/ManageNotices.tsx'
+    Imported via "@/components/ui/button" from file 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/components/admin/ManageTimetables.tsx'
+    Imported via "@/components/ui/button" from file 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/components/admin/ManageSliders.tsx'
+    Imported via "@/components/ui/button" from file 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/components/admin/ManageResultSettings.tsx'
+    Matched by include pattern 'src' in 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/tsconfig.json'
+    Imported via './Button' from file 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/components/ui/index.ts'
+src/components/ui/index.ts(3,10): error TS2305: Module '"./Input"' has no exported member 'default'.
+src/components/ui/index.ts(3,34): error TS1149: File name 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/components/ui/Input.tsx' differs from already included file name 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/components/ui/input.tsx' only in casing.
+  The file is in the program because:
+    Imported via "@/components/ui/input" from file 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/components/home/Header.tsx'
+    Imported via "@/components/ui/input" from file 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/components/home/ResultSection.tsx'
+    Imported via "@/components/ui/input" from file 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/pages/Upload.tsx'
+    Imported via "@/components/ui/input" from file 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/components/admin/ManageUpdates.tsx'
+    Imported via "@/components/ui/input" from file 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/components/admin/ManageNotices.tsx'
+    Imported via "@/components/ui/input" from file 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/components/admin/ManageTimetables.tsx'
+    Imported via "@/components/ui/input" from file 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/components/admin/ManageSliders.tsx'
+    Imported via "@/components/ui/input" from file 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/components/admin/ManageResultSettings.tsx'
+    Imported via './Input' from file 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/components/ui/index.ts'
+    Matched by include pattern 'src' in 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/tsconfig.json'
+src/components/ui/index.ts(4,10): error TS2305: Module '"./Label"' has no exported member 'default'.
+src/components/ui/index.ts(4,34): error TS1149: File name 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/components/ui/Label.tsx' differs from already included file name 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/components/ui/label.tsx' only in casing.
+  The file is in the program because:
+    Imported via "@/components/ui/label" from file 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/pages/Upload.tsx'
+    Imported via "@/components/ui/label" from file 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/components/admin/ManageUpdates.tsx'
+    Imported via "@/components/ui/label" from file 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/components/admin/ManageNotices.tsx'
+    Imported via "@/components/ui/label" from file 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/components/admin/ManageTimetables.tsx'
+    Imported via "@/components/ui/label" from file 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/components/admin/ManageSliders.tsx'
+    Imported via "@/components/ui/label" from file 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/components/admin/ManageResultSettings.tsx'
+    Imported via './Label' from file 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/components/ui/index.ts'
+    Matched by include pattern 'src' in 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/tsconfig.json'
+src/components/ui/index.ts(5,10): error TS2305: Module '"./Card"' has no exported member 'default'.
+src/components/ui/index.ts(5,33): error TS1149: File name 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/components/ui/Card.tsx' differs from already included file name 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/components/ui/card.tsx' only in casing.
+  The file is in the program because:
+    Imported via "@/components/ui/card" from file 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/components/home/ResultSection.tsx'
+    Imported via "@/components/ui/card" from file 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/components/home/ExamTimetable.tsx'
+    Imported via "@/components/ui/card" from file 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/components/home/NoticesSection.tsx'
+    Imported via "@/components/ui/card" from file 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/components/home/MaterialsFilter.tsx'
+    Imported via "@/components/ui/card" from file 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/components/home/MaterialCard.tsx'
+    Imported via "@/components/ui/card" from file 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/components/home/UploadCTA.tsx'
+    Imported via "@/components/ui/card" from file 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/pages/Upload.tsx'
+    Imported via "@/components/ui/card" from file 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/pages/Materials.tsx'
+    Imported via "@/components/ui/card" from file 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/pages/Terms.tsx'
+    Imported via "@/components/ui/card" from file 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/pages/Privacy.tsx'
+    Imported via '../components/ui/card' from file 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/pages/Admin.tsx'
+    Imported via "@/components/ui/card" from file 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/components/admin/ManageUpdates.tsx'
+    Imported via "@/components/ui/card" from file 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/components/admin/ManageNotices.tsx'
+    Imported via "@/components/ui/card" from file 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/components/admin/ManageTimetables.tsx'
+    Imported via "@/components/ui/card" from file 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/components/admin/ManageSliders.tsx'
+    Imported via "@/components/ui/card" from file 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/components/admin/ManageResultSettings.tsx'
+    Matched by include pattern 'src' in 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/tsconfig.json'
+    Imported via './Card' from file 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/components/ui/index.ts'
+src/components/ui/index.ts(6,10): error TS2305: Module '"./Badge"' has no exported member 'default'.
+src/components/ui/index.ts(6,34): error TS1149: File name 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/components/ui/Badge.tsx' differs from already included file name 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/components/ui/badge.tsx' only in casing.
+  The file is in the program because:
+    Imported via "@/components/ui/badge" from file 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/components/home/NoticesSection.tsx'
+    Imported via "@/components/ui/badge" from file 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/components/home/MaterialCard.tsx'
+    Imported via "@/components/ui/badge" from file 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/components/home/PreviewModal.tsx'
+    Imported via "@/components/ui/badge" from file 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/pages/Materials.tsx'
+    Imported via '../components/ui/badge' from file 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/pages/Admin.tsx'
+    Imported via "@/components/ui/badge" from file 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/components/admin/ManageNotices.tsx'
+    Matched by include pattern 'src' in 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/tsconfig.json'
+    Imported via './Badge' from file 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/components/ui/index.ts'
+src/components/ui/index.ts(7,10): error TS2305: Module '"./Select"' has no exported member 'default'.
+src/components/ui/index.ts(7,35): error TS1149: File name 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/components/ui/Select.tsx' differs from already included file name 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/components/ui/select.tsx' only in casing.
+  The file is in the program because:
+    Imported via "@/components/ui/select" from file 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/components/home/MaterialsFilter.tsx'
+    Imported via "@/components/ui/select" from file 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/pages/Upload.tsx'
+    Imported via './Select' from file 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/components/ui/index.ts'
+    Matched by include pattern 'src' in 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/tsconfig.json'
+src/components/ui/index.ts(8,10): error TS2305: Module '"./Dialog"' has no exported member 'default'.
+src/components/ui/index.ts(8,35): error TS1149: File name 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/components/ui/Dialog.tsx' differs from already included file name 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/components/ui/dialog.tsx' only in casing.
+  The file is in the program because:
+    Imported via "@/components/ui/dialog" from file 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/components/home/PreviewModal.tsx'
+    Imported via '../components/ui/dialog' from file 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/pages/Admin.tsx'
+    Imported via "@/components/ui/dialog" from file 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/components/admin/ManageUpdates.tsx'
+    Imported via "@/components/ui/dialog" from file 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/components/admin/ManageNotices.tsx'
+    Imported via "@/components/ui/dialog" from file 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/components/admin/ManageTimetables.tsx'
+    Imported via "@/components/ui/dialog" from file 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/components/admin/ManageSliders.tsx'
+    Matched by include pattern 'src' in 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/tsconfig.json'
+    Imported via './Dialog' from file 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/components/ui/index.ts'
+src/components/ui/index.ts(9,10): error TS2305: Module '"./Tabs"' has no exported member 'default'.
+src/components/ui/index.ts(9,33): error TS1149: File name 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/components/ui/Tabs.tsx' differs from already included file name 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/components/ui/tabs.tsx' only in casing.
+  The file is in the program because:
+    Imported via '../components/ui/tabs' from file 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/pages/Admin.tsx'
+    Imported via './Tabs' from file 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/components/ui/index.ts'
+    Matched by include pattern 'src' in 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/tsconfig.json'
+src/components/ui/index.ts(10,10): error TS2305: Module '"./Switch"' has no exported member 'default'.
+src/components/ui/index.ts(10,35): error TS1149: File name 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/components/ui/Switch.tsx' differs from already included file name 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/components/ui/switch.tsx' only in casing.
+  The file is in the program because:
+    Imported via "@/components/ui/switch" from file 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/components/admin/ManageUpdates.tsx'
+    Imported via "@/components/ui/switch" from file 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/components/admin/ManageNotices.tsx'
+    Imported via "@/components/ui/switch" from file 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/components/admin/ManageTimetables.tsx'
+    Imported via "@/components/ui/switch" from file 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/components/admin/ManageSliders.tsx'
+    Imported via "@/components/ui/switch" from file 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/components/admin/ManageResultSettings.tsx'
+    Imported via './Switch' from file 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/components/ui/index.ts'
+    Matched by include pattern 'src' in 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/tsconfig.json'
+src/components/ui/index.ts(11,10): error TS2305: Module '"./Alert"' has no exported member 'default'.
+src/components/ui/index.ts(11,34): error TS1149: File name 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/components/ui/Alert.tsx' differs from already included file name 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/components/ui/alert.tsx' only in casing.
+  The file is in the program because:
+    Imported via "@/components/ui/alert" from file 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/pages/Upload.tsx'
+    Matched by include pattern 'src' in 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/tsconfig.json'
+    Imported via './Alert' from file 'D:/mrca-students-hub-backend 1/mrca-students-hub-java/frontend-react/src/components/ui/index.ts'
+src/components/ui/label.tsx(2,33): error TS2307: Cannot find module '@radix-ui/react-label' or its corresponding type declarations.
+src/components/ui/select.tsx(2,34): error TS2307: Cannot find module '@radix-ui/react-select' or its corresponding type declarations.
+src/components/ui/switch.tsx(2,35): error TS2307: Cannot find module '@radix-ui/react-switch' or its corresponding type declarations.
+src/components/ui/tabs.tsx(2,32): error TS2307: Cannot find module '@radix-ui/react-tabs' or its corresponding type declarations.
+src/pages/Admin.tsx(1,8): error TS6133: 'React' is declared but its value is never read.
+src/pages/Admin.tsx(6,20): error TS6133: 'filesApi' is declared but its value is never read.
+src/pages/Admin.tsx(10,29): error TS6133: 'CardHeader' is declared but its value is never read.
+src/pages/Admin.tsx(10,41): error TS6133: 'CardTitle' is declared but its value is never read.
+src/pages/Admin.tsx(19,3): error TS6133: 'Bell' is declared but its value is never read.
+src/pages/Admin.tsx(19,9): error TS6133: 'Calendar' is declared but its value is never read.
+src/pages/Admin.tsx(19,19): error TS6133: 'Image' is declared but its value is never read.
+src/pages/Admin.tsx(19,36): error TS6133: 'Sparkles' is declared but its value is never read.
+src/pages/Admin.tsx(356,69): error TS2339: Property 'title' does not exist on type 'never'.
+src/pages/Admin.tsx(361,88): error TS2339: Property 'group' does not exist on type 'never'.
+src/pages/Admin.tsx(362,105): error TS2339: Property 'semester' does not exist on type 'never'.
+src/pages/Admin.tsx(363,105): error TS2339: Property 'subject' does not exist on type 'never'.
+src/pages/Admin.tsx(364,105): error TS2339: Property 'material_type' does not exist on type 'never'.
+src/pages/Admin.tsx(365,105): error TS2339: Property 'year' does not exist on type 'never'.
+src/pages/Admin.tsx(367,34): error TS2339: Property 'file_url' does not exist on type 'never'.
+src/pages/Admin.tsx(369,42): error TS2339: Property 'file_url' does not exist on type 'never'.
+src/pages/Admin.tsx(373,37): error TS2339: Property 'file_url' does not exist on type 'never'.
+src/pages/Admin.tsx(375,42): error TS2339: Property 'file_url' does not exist on type 'never'.
+src/pages/Admin.tsx(376,42): error TS2339: Property 'title' does not exist on type 'never'.
+src/pages/Admin.tsx(389,61): error TS2339: Property 'file_url' does not exist on type 'never'.
+src/pages/Home.tsx(1,8): error TS6133: 'React' is declared but its value is never read.
+src/pages/Home.tsx(6,24): error TS6133: 'noticesApi' is declared but its value is never read.
+src/pages/Home.tsx(6,36): error TS6133: 'examsApi' is declared but its value is never read.
+src/pages/Home.tsx(6,46): error TS6133: 'llmApi' is declared but its value is never read.
+src/pages/Materials.tsx(1,8): error TS6133: 'React' is declared but its value is never read.
+src/pages/Privacy.tsx(1,1): error TS6133: 'React' is declared but its value is never read.
+src/pages/Terms.tsx(1,1): error TS6133: 'React' is declared but its value is never read.
+src/pages/Upload.tsx(179,70): error TS7006: Parameter 'val' implicitly has an 'any' type.
+src/pages/Upload.tsx(193,73): error TS7006: Parameter 'val' implicitly has an 'any' type.
+src/pages/Upload.tsx(209,78): error TS7006: Parameter 'val' implicitly has an 'any' type.
+src/pages/Upload.tsx(223,69): error TS7006: Parameter 'val' implicitly has an 'any' type.
