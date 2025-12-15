@@ -125,8 +125,8 @@ public class ResultCheckService {
                 String content = (String) message.get("content");
 
                 // Extract JSON from the content
-                String jsonStart = content.indexOf("{");
-                String jsonEnd = content.lastIndexOf("}") + 1;
+                int jsonStart = content.indexOf("{");
+                int jsonEnd = content.lastIndexOf("}") + 1;
                 if (jsonStart != -1 && jsonEnd > jsonStart) {
                     String jsonContent = content.substring(jsonStart, jsonEnd);
                     Map<String, Object> resultMap = objectMapper.readValue(jsonContent, Map.class);

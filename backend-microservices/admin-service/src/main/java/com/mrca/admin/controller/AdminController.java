@@ -2,6 +2,8 @@ package com.mrca.admin.controller;
 
 import com.mrca.admin.feign.*;
 import lombok.RequiredArgsConstructor;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.Map;
@@ -11,8 +13,10 @@ import java.util.Map;
 @RequiredArgsConstructor
 @CrossOrigin(origins = "*")
 public class AdminController {
-    
+	
+    @Autowired
     private final MaterialServiceClient materialClient;
+    
     private final NoticeServiceClient noticeClient;
     private final ExamServiceClient examClient;
     

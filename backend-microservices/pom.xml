@@ -25,7 +25,7 @@
         <module>exam-service</module>
         <module>file-service</module>
         <module>admin-service</module>
-        <!-- <module>llm-service</module> -->
+        <module>llm-service</module>
         <module>eureka-server</module>
     </modules>
 

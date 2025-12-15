@@ -1,6 +1,6 @@
+com\mrca\auth\service\AuthServiceImpl.class
 com\mrca\auth\AuthServiceApplication.class
 com\mrca\auth\model\User$Role.class
 com\mrca\auth\service\AuthService.class
 com\mrca\auth\controller\AuthController.class
 com\mrca\auth\model\User.class
-com\mrca\auth\service\AuthServiceImpl.class

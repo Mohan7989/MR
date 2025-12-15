@@ -1,3 +1,5 @@
 com\mrca\llm\model\ResultCheckRequest.class
+com\mrca\llm\controller\LlmController.class
 com\mrca\llm\LlmServiceApplication.class
 com\mrca\llm\model\ResultCheckResponse.class
+com\mrca\llm\service\ResultCheckService.class
