@@ -118,9 +118,13 @@ public class ResultCheckService {
 
     private ResultCheckResponse parseOpenAIResponse(ResultCheckRequest request, String openaiResponse) {
         try {
-            Map<String, Object> responseMap = objectMapper.readValue(openaiResponse, Map.class);
+            Map<String, Object> responseMap = objectMapper.readValue(openaiResponse,
+                    new com.fasterxml.jackson.core.type.TypeReference<Map<String, Object>>() {
+                    });
+            @SuppressWarnings("unchecked")
             List<Map<String, Object>> choices = (List<Map<String, Object>>) responseMap.get("choices");
             if (choices != null && !choices.isEmpty()) {
+                @SuppressWarnings("unchecked")
                 Map<String, Object> message = (Map<String, Object>) choices.get(0).get("message");
                 String content = (String) message.get("content");
 
@@ -129,7 +133,9 @@ public class ResultCheckService {
                 int jsonEnd = content.lastIndexOf("}") + 1;
                 if (jsonStart != -1 && jsonEnd > jsonStart) {
                     String jsonContent = content.substring(jsonStart, jsonEnd);
-                    Map<String, Object> resultMap = objectMapper.readValue(jsonContent, Map.class);
+                    Map<String, Object> resultMap = objectMapper.readValue(jsonContent,
+                            new com.fasterxml.jackson.core.type.TypeReference<Map<String, Object>>() {
+                            });
 
                     ResultCheckResponse response = new ResultCheckResponse();
                     response.setFound((Boolean) resultMap.getOrDefault("found", false));

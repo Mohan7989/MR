@@ -10,7 +10,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Map;
-import java.util.Optional;
+
 import java.util.HashMap;
 
 @Service
@@ -100,6 +100,7 @@ public class ExamService {
     // Settings methods
     public Map<String, Object> getSetting(String key) {
         String query = "SELECT setting_key, setting_value, is_enabled FROM app_settings WHERE setting_key = :key";
+        @SuppressWarnings("unchecked")
         List<Object[]> result = entityManager.createNativeQuery(query)
                 .setParameter("key", key)
                 .getResultList();
@@ -119,6 +120,7 @@ public class ExamService {
 
     public List<Map<String, Object>> getAllSettings() {
         String query = "SELECT setting_key, setting_value, is_enabled FROM app_settings";
+        @SuppressWarnings("unchecked")
         List<Object[]> results = entityManager.createNativeQuery(query).getResultList();
 
         return results.stream().map(row -> {
